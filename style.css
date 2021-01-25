@@ -5,14 +5,17 @@
     box-sizing: border-box;
   }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0px;
+}
+
 /*EXOS BECODE 4*/
 /* Adapte la couleur de l'écran selon la taille de celui-ci */
 @media only screen and (max-width: 380px) {
   body {
-    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     background-color: red;
-    padding: 0px;
   }
   #small, #medium, #large {
     font-size: 1em;
@@ -32,10 +35,8 @@
 
 @media only screen and (min-width: 381px) and (max-width: 768px) {
   body {
-    font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     background-color: green;
-    padding: 0px;
   }
   #small, #medium, #large {
     font-size: 1em;
@@ -54,7 +55,6 @@
 }
 @media only screen and (min-width: 769px) {
   body {
-    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     background-color: blue;
   }
