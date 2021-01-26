@@ -18,7 +18,7 @@ body {
 .two { grid-area: two; }
 .three { grid-area: three; }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 340px) {
     body {
         font-size: 12px;
         background-color: orange;
@@ -40,7 +40,7 @@ body {
       }
 }
 
-@media only screen and (min-width: 551px) and (max-width: 768px) {
+@media only screen and (min-width: 341px) and (max-width: 768px) {
     body {
       font-size: 15px;
       background-color: green;
