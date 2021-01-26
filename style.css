@@ -25,7 +25,7 @@ body {
   }
   .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   #small, #medium, #large {
     font-size: 1em;
