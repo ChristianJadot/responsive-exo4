@@ -10,88 +10,73 @@ body {
   padding: 0px;
 }
 .container {
-  display: block;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
 }
-/*.box {
-  height: 50vh;
-}*/
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
 
-/*EXOS BECODE 4*/
-/* Adapte la couleur de l'écran selon la taille de celui-ci */
 @media only screen and (max-width: 550px) {
-  body {
-    font-size: 12px;
-    background-color: red;
-  }
-  .container {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  #small, #medium, #large {
-    font-size: 1em;
-    color: gray;
-    padding: 5px 10px;
-    margin: 0 0 10px 0;
-    background-color: #ebebeb;
-    border-radius: 5px;
-  }
-  #small {width: 100vw;}
-  #medium {width: 100vw;}
-  #large {width:100vw;}
-  
-  h1 {font-weight: 800;}
-  h2 {font-weight: 600; text-decoration: underline;}
-  p {font-weight: 300;}
+    body {
+        font-size: 12px;
+        background-color: red;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+          "one"
+          "two"
+          "three";
+    }
+    .one, .two, .three {
+        font-size: 1em;
+        color: gray;
+        padding: 5px 10px;
+        background-color: #ebebeb;
+        border-radius: 5px;
+      }
 }
 
 @media only screen and (min-width: 551px) and (max-width: 768px) {
-  body {
-    font-size: 15px;
-    background-color: green;
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #small, #medium, #large {
-    font-size: 1em;
-    color: gray;
-    padding: 5px 10px;
-    margin: 0 0 10px 0;
-    background-color: #ebebeb;
-    border-radius: 5px;
-  }
-  #small {width: calc(100vw / 3*2);}
-  #medium {width: calc(100vw / 3);}
-  #large {width:100vw;}
-  
-  h1 {font-weight: 800;}
-  h2 {font-weight: 600; text-decoration: underline;}
-  p {font-weight: 300;}
+    body {
+      font-size: 15px;
+      background-color: green;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+           "one one two"
+           "three three three";
+    }
+    .one, .two, .three {
+        font-size: 1em;
+        color: gray;
+        padding: 5px 10px;
+        background-color: #ebebeb;
+        border-radius: 5px;
+      }
 }
-@media only screen and (min-width: 769px) {
-  body {
-    font-size: 18px;
-    background-color: skyblue;
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #small, #medium, #large {
-    font-size: 1em;
-    color: gray;
-    padding: 5px 10px;
-    margin: 0 0 10px 0;
-    background-color: #ebebeb;
-    border-radius: 5px;
-  }
-  #small {width: calc(100vw / 3);}
-  #medium {width: calc(100vw / 3);}
-  #large {width: calc(100vw / 3);}
 
-  h1 {font-weight: 800;}
-  h2 {font-weight: 600; text-decoration: underline;}
-  p {font-weight: 300;}
+@media only screen and (min-width: 769px) {
+    body {
+      font-size: 18px;
+      background-color: skyblue;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+          "one two three";
+    }
+    .one, .two, .three {
+        font-size: 1em;
+        color: gray;
+        padding: 5px 10px;
+        background-color: #ebebeb;
+        border-radius: 5px;
+      }
 }
-/*FIN EXOS BECODE 4*/
